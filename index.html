@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
-    <title>TURNO FIXO - Aperam | Escala de Trabalho</title>
+    <title>TURNO FIXO | Escala de Trabalho</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -19,7 +19,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 16px 12px 30px 12px;
+            padding: 8px 6px 20px 6px;
             min-height: 100vh;
         }
 
@@ -28,7 +28,7 @@
             width: 100%;
             background: rgba(255, 255, 255, 0.96);
             backdrop-filter: blur(10px);
-            border-radius: 28px;
+            border-radius: 24px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
             overflow: hidden;
             transition: all 0.2s;
@@ -36,36 +36,36 @@
         }
 
         .header {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 24px 16px;
+            background: linear-gradient(135deg, #501975 0%, #df4a16 100%);
+            padding: 16px 12px;
             text-align: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
             position: relative;
         }
         
-        /* Aperam Logo Text Style mimicking the image */
         .logo-text {
-            font-size: 2.2rem;
-            font-weight: 400;
-            letter-spacing: -1.5px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: -1px;
             color: #ffffff;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
             font-family: 'Inter', sans-serif;
             text-transform: lowercase;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
 
         .header-card {
             background: rgba(255, 255, 255, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 16px;
-            padding: 10px;
+            border-radius: 12px;
+            padding: 6px;
             display: inline-block;
-            width: 90%;
+            width: 95%;
             box-shadow: inset 0 1px 4px rgba(255,255,255,0.2);
         }
 
         .header h1 {
-            font-size: 1.2rem;
+            font-size: 0.9rem;
             font-weight: 700;
             color: #ffffff;
             text-transform: uppercase;
@@ -76,41 +76,40 @@
             gap: 6px;
         }
         .header p {
-            font-size: 0.8rem;
+            font-size: 0.65rem;
             color: rgba(255, 255, 255, 0.9);
             margin-top: 2px;
             font-weight: 500;
         }
 
-        /* Seletor de grupo estilizado como na imagem */
         .grupo-selector {
             background: #ffffff;
-            padding: 14px 16px;
+            padding: 10px 12px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 8px;
+            gap: 4px;
             border-bottom: 1px solid #f0f0f0;
         }
         .grupo-selector span {
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             color: #555555;
             font-weight: 600;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 4px;
         }
         .grupo-buttons {
             display: flex;
-            gap: 8px;
+            gap: 4px;
         }
         .grupo-btn {
             background: #ffffff;
             border: 1px solid #dcdcdc;
-            width: 42px;
-            height: 32px;
-            border-radius: 20px;
-            font-size: 0.8rem;
+            width: 34px;
+            height: 28px;
+            border-radius: 14px;
+            font-size: 0.7rem;
             font-weight: 600;
             cursor: pointer;
             color: #444444;
@@ -128,14 +127,14 @@
         }
         .grupo-btn:active { transform: scale(0.94); }
 
-        /* Navegação do calendário com estilo da imagem */
         .calendar-nav {
             background: #ffffff;
-            padding: 12px 16px;
+            padding: 10px 12px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #f0f0f0;
+            gap: 4px;
         }
         .nav-controls {
             display: flex;
@@ -149,10 +148,10 @@
             background: transparent;
             border: none;
             color: #df4a16;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             font-weight: bold;
-            width: 32px;
-            height: 28px;
+            width: 26px;
+            height: 24px;
             cursor: pointer;
             transition: 0.2s;
             display: inline-flex;
@@ -169,26 +168,26 @@
         
         .month-year {
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 0.8rem;
             color: #df4a16;
-            padding: 0 16px;
+            padding: 0 8px;
             text-align: center;
+            min-width: 85px;
         }
         
-        /* Toggle de visualização como pílula na imagem */
         .view-toggle {
             display: flex;
             background: #f1f1f1;
-            padding: 3px;
+            padding: 2px;
             border-radius: 20px;
             border: 1px solid #e0e0e0;
         }
         .view-btn {
             background: transparent;
             border: none;
-            padding: 5px 12px;
+            padding: 4px 8px;
             border-radius: 18px;
-            font-size: 0.75rem;
+            font-size: 0.65rem;
             font-weight: 600;
             cursor: pointer;
             color: #666666;
@@ -200,9 +199,8 @@
             font-weight: 700;
         }
 
-        /* Calendário */
         .calendar-month-view {
-            padding: 16px 14px;
+            padding: 10px 6px;
             display: none;
             background: #ffffff;
         }
@@ -213,58 +211,59 @@
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
         }
         .weekdays span {
-            font-size: 0.75rem;
-            font-weight: 500;
+            font-size: 0.65rem;
+            font-weight: 600;
             color: #999999;
         }
         .calendar-grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            gap: 6px;
+            gap: 3px;
         }
         .calendar-day {
             background: #ffffff;
-            border-radius: 10px;
-            padding: 6px 2px;
+            border-radius: 6px;
+            padding: 4px 1px;
             text-align: center;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             font-weight: 600;
             color: #222222;
             transition: all 0.1s;
             cursor: pointer;
             border: 1px solid #e8e8e8;
-            min-height: 64px;
+            min-height: 48px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            align-items: center;
         }
         .calendar-day.empty {
             background: transparent;
             cursor: default;
             border: none;
+            min-height: auto;
         }
         .calendar-day.today {
             border: 2px solid #501975;
-            box-shadow: 0 0 8px rgba(80, 25, 117, 0.2);
+            box-shadow: 0 0 4px rgba(80, 25, 117, 0.2);
         }
         .day-number {
-            font-size: 0.9rem;
+            font-size: 0.75rem;
             font-weight: 700;
             color: #333333;
-            margin-top: 2px;
+            margin-top: 1px;
         }
         
-        /* Status de Turno baseados fielmente na imagem */
         .turno-status {
-            font-size: 0.6rem;
+            font-size: 0.5rem;
             font-weight: 700;
-            padding: 3px 2px;
-            border-radius: 6px;
+            padding: 1px 0;
+            border-radius: 4px;
             display: block;
-            width: 90%;
+            width: 95%;
             margin: 2px auto;
             text-align: center;
             text-transform: uppercase;
@@ -280,18 +279,17 @@
         .feriado-badge {
             background: #fef08a;
             color: #854d0e;
-            font-size: 0.55rem;
-            padding: 1px 2px;
-            border-radius: 4px;
-            margin: 1px auto 2px auto;
+            font-size: 0.45rem;
+            padding: 0 1px;
+            border-radius: 3px;
+            margin: 1px auto;
             font-weight: 700;
-            width: 90%;
+            width: 95%;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
 
-        /* Tabela de escala */
         .escala-view {
             display: none;
             background: #ffffff;
@@ -301,99 +299,103 @@
         }
         .escala-table-wrapper {
             overflow-x: auto;
-            padding: 8px;
+            padding: 4px;
+            -webkit-overflow-scrolling: touch;
         }
         .escala-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.75rem;
+            font-size: 0.65rem;
         }
         .escala-table th {
             background: #501975;
             color: #ffffff;
             font-weight: 700;
-            padding: 12px 6px;
-            font-size: 0.75rem;
+            padding: 8px 2px;
+            font-size: 0.65rem;
             text-transform: uppercase;
+            white-space: nowrap;
         }
         .escala-table td {
-            padding: 10px 6px;
+            padding: 6px 2px;
             border-bottom: 1px solid #f0f0f0;
             text-align: center;
             font-weight: 600;
             color: #444444;
+            white-space: nowrap;
         }
         .col-data {
             text-align: left !important;
             font-weight: 700 !important;
             color: #501975;
-            padding-left: 8px !important;
+            padding-left: 4px !important;
+            white-space: nowrap;
         }
-        .dia-semana { font-weight: 600; }
+        .dia-semana { font-weight: 600; white-space: nowrap; }
         .sab { color: #df4a16 !important; }
         .dom { color: #501975 !important; font-weight: 700; }
         
         .feriado-marker {
             background: #fef08a;
-            font-size: 0.65rem;
-            padding: 2px 4px;
-            border-radius: 4px;
+            font-size: 0.55rem;
+            padding: 1px 2px;
+            border-radius: 3px;
             color: #854d0e;
             font-weight: 700;
-            margin-left: 4px;
+            margin-left: 2px;
+            display: inline-block;
         }
         
-        /* Cores dos textos das colunas de turno da tabela */
         .turno-g1 { color: #df4a16; font-weight: 700; }
         .turno-g2 { color: #c2410c; font-weight: 700; }
         .turno-g3 { color: #501975; font-weight: 700; }
         .turno-g4 { color: #6b21a8; font-weight: 700; }
         .turno-folga-tab { color: #718096; font-weight: 500; }
 
-        /* Botão do Google Agenda */
         .btn-agenda {
             background: #ffffff;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 3px 8px;
-            border-radius: 12px;
-            font-size: 0.7rem;
+            padding: 1px 4px;
+            border-radius: 8px;
+            font-size: 0.6rem;
             font-weight: 700;
             text-decoration: none;
             transition: 0.2s;
             color: #df4a16;
             border: 1px solid #df4a16;
+            white-space: nowrap;
         }
         .btn-agenda:active { background: #df4a16; color: #ffffff; }
 
         .observ-box {
             background: #fbfbfb;
-            margin: 12px;
-            padding: 12px 16px;
-            border-radius: 16px;
+            margin: 8px 6px;
+            padding: 8px 12px;
+            border-radius: 12px;
             border-left: 4px solid #df4a16;
         }
         .observ-box h3 {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             color: #333333;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             font-weight: 700;
         }
         .observ-box ul {
-            padding-left: 16px;
+            padding-left: 0;
             color: #666666;
-            font-size: 0.75rem;
-            line-height: 1.4;
+            font-size: 0.65rem;
+            line-height: 1.3;
         }
         .observ-box li {
-            margin: 4px 0;
+            margin: 3px 0;
         }
         .footer-note {
             text-align: center;
-            font-size: 0.65rem;
+            font-size: 0.55rem;
             color: rgba(255, 255, 255, 0.7);
-            padding: 14px 10px;
+            padding: 10px 8px;
             background: rgba(0, 0, 0, 0.1);
         }
     </style>
@@ -401,16 +403,15 @@
 <body>
 <div class="app-container">
     <div class="header">
-        <div class="logo-text">aperam</div>
+        <div class="logo-text">TURNO FIXO</div>
         <div class="header-card">
             <h1>🏭 TURNO FIXO</h1>
             <p>MG | Escala 6x2</p>
         </div>
     </div>
 
-    <!-- Seletor de Grupo -->
     <div class="grupo-selector">
-        <span>👥 Visualizar grupo:</span>
+        <span>👥 Grupo:</span>
         <div class="grupo-buttons">
             <button class="grupo-btn" data-grupo="G1">G1</button>
             <button class="grupo-btn" data-grupo="G2">G2</button>
@@ -431,23 +432,21 @@
         </div>
     </div>
 
-    <!-- Visualização Calendário -->
     <div id="calendarView" class="calendar-month-view active-view">
         <div class="weekdays">
             <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span>
         </div>
         <div id="calendarGrid" class="calendar-grid"></div>
-        <div class="observ-box" style="margin-top: 14px;">
+        <div class="observ-box" style="margin-top: 10px;">
             <h3>📌 Legenda</h3>
-            <ul style="list-style-type: none; padding-left: 0;">
-                <li><span style="color: #df4a16; font-weight: bold;">■</span> Gradiente Aperam: Dias de Trabalho</li>
+            <ul style="list-style-type: none;">
+                <li><span style="color: #df4a16; font-weight: bold;">■</span> Gradiente Aperam: Trabalho</li>
                 <li><span style="color: #718096; font-weight: bold;">■</span> Cinza claro: Folga do grupo</li>
                 <li><span style="color: #854d0e; font-weight: bold;">■</span> Amarelo: Feriado Nacional</li>
             </ul>
         </div>
     </div>
 
-    <!-- Visualização Tabela de Escala -->
     <div id="scaleView" class="escala-view">
         <div class="escala-table-wrapper">
             <table class="escala-table">
@@ -465,10 +464,6 @@
                 <tbody id="escalaBody"></tbody>
             </table>
         </div>
-        <div class="observ-box" id="observBox">
-            <h3>📌 Feriados Nacionais do Mês</h3>
-            <ul id="feriadosList"><li>Carregando...</li></ul>
-        </div>
     </div>
 
     <div class="footer-note">
@@ -477,7 +472,6 @@
 </div>
 
 <script>
-    // ==================== ESCALA BASEADA NA IMAGEM FORNECIDA ====================
     const escalaBase = [
         { data: "16/05/2026", g1:"F", g2:"2", g3:"3", g4:"4" },
         { data: "17/05/2026", g1:"F", g2:"2", g3:"3", g4:"4" },
@@ -513,13 +507,13 @@
     }
     
     const feriadosNacionais = [
-        { dia: 1, mes: 1, nome: "Confraternização" },
+        { dia: 1, mes: 1, nome: "Confraternização Universal" },
         { dia: 21, mes: 4, nome: "Tiradentes" },
         { dia: 1, mes: 5, nome: "Dia do Trabalhador" },
-        { dia: 7, mes: 9, nome: "Independência" },
-        { dia: 12, mes: 10, nome: "Aparecida" },
+        { dia: 7, mes: 9, nome: "Independência do Brasil" },
+        { dia: 12, mes: 10, nome: "Nossa Sra. Aparecida" },
         { dia: 2, mes: 11, nome: "Finados" },
-        { dia: 15, mes: 11, nome: "República" },
+        { dia: 15, mes: 11, nome: "Proclamação da República" },
         { dia: 20, mes: 11, nome: "Consciência Negra" },
         { dia: 25, mes: 12, nome: "Natal" }
     ];
@@ -545,7 +539,7 @@
         const corpusChristi = new Date(pascoa); corpusChristi.setDate(pascoa.getDate() + 60);
         return [
             { dia: carnaval.getDate(), mes: carnaval.getMonth()+1, nome: "Carnaval" },
-            { dia: sextaSanta.getDate(), mes: sextaSanta.getMonth()+1, nome: "Sexta Santa" },
+            { dia: sextaSanta.getDate(), mes: sextaSanta.getMonth()+1, nome: "Sexta-Feira Santa" },
             { dia: corpusChristi.getDate(), mes: corpusChristi.getMonth()+1, nome: "Corpus Christi" }
         ];
     }
@@ -623,7 +617,7 @@
                         <div class="turno-status ${isTrabalho ? 'turno-trabalho' : 'turno-folga'}">
                             ${isTrabalho ? `TG${selectedGrupo.charAt(1)}` : 'Folga'}
                         </div>
-                        ${isFeriado ? `<div class="feriado-badge" title="${feriadoNome}">Feriado</div>` : ''}
+                        ${isFeriado ? `<div class="feriado-badge" title="${feriadoNome}">${feriadoNome.substring(0, 5)}</div>` : ''}
                     `;
                     
                     dayDiv.addEventListener("click", (function(d, m, y) {
@@ -670,7 +664,6 @@
     
     function renderScaleTable() {
         const tbody = document.getElementById('escalaBody');
-        const feriadosUl = document.getElementById('feriadosList');
         if(!tbody) return;
         tbody.innerHTML = '';
         
@@ -678,7 +671,6 @@
         const feriados = getFeriadosByYear(currentYear);
         const feriadosMap = new Map();
         feriados.forEach(f => { feriadosMap.set(`${f.mes}/${f.dia}`, f.nome); });
-        const monthFeriados = [];
         
         for(let d = 1; d <= daysInMonth; d++) {
             const dataObj = new Date(currentYear, currentMonth, d);
@@ -690,7 +682,6 @@
             const chaveFeriado = `${currentMonth+1}/${diaStr}`;
             const isFeriado = feriadosMap.has(chaveFeriado);
             const feriadoNome = isFeriado ? feriadosMap.get(chaveFeriado) : "";
-            if(isFeriado) monthFeriados.push(`${diaStr}/${mesStr} - ${feriadoNome}`);
             
             let classeDia = "dia-semana";
             if(diaSemana === "Sáb") classeDia += " sab";
@@ -718,12 +709,6 @@
             
             tr.appendChild(tdData); tr.appendChild(tdDia); tr.appendChild(tdG1); tr.appendChild(tdG2); tr.appendChild(tdG3); tr.appendChild(tdG4); tr.appendChild(tdAgenda);
             tbody.appendChild(tr);
-        }
-        
-        if(monthFeriados.length > 0) {
-            feriadosUl.innerHTML = monthFeriados.map(f => `<li>📅 ${f}</li>`).join('');
-        } else {
-            feriadosUl.innerHTML = '<li>✅ Nenhum feriado nacional neste mês.</li>';
         }
     }
     
